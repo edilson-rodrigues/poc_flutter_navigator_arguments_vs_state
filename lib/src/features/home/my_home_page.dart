@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../common/common.dart';
 import '../../store.dart';
 import '../features.dart';
+import '../user/user.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -48,6 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(_title),
             Text(_message),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, UserPage.route);
+              },
+              child: const Text('User Page'),
+            ),
           ],
         ),
       ),
